@@ -1,0 +1,118 @@
+.social__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @media all and (max-width: 1080px) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media all and (max-width: 630px) {
+        display: block;
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+
+            @media all and (max-width: 1080px) {
+                margin-bottom: 0;
+
+                &:not(:last-child) {
+                    margin-right: 28px;
+
+                    @media all and (max-width: 485px) {
+                        margin-right: 0;
+
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            font-family: 'Lato';
+            font-weight: 600;
+            font-size: 20px;
+            text-decoration-line: underline;
+            color: #0CAED5;
+
+            @media all and (max-width: 800px) {
+                font-size: 18px;
+            }
+
+            &:hover &__icon__fb {
+                background-color: #6682C1;
+                transition: background-color .3s ease-in-out;
+            }
+            
+            &:hover &__icon__vk {
+                background-color: #7294C7;
+                transition: background-color .3s ease-in-out;
+            }
+            
+            &:hover &__icon__yt {
+                background-color: #F40000;
+                transition: background-color .3s ease-in-out;
+            }
+
+            &:hover {
+                background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            &__icon {
+                position: relative;
+                display: inline-block;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                transition: background-color .3s ease-in-out;
+
+                & img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
+
+            &__icon__fb img {
+                top: 3px;
+                left: 9px;
+            }
+
+            &__icon__vk img {
+                top: 11px;
+                left: 6px;
+            }
+
+            &__icon__yt img {
+                top: 10px;
+                left: 7px;
+            }
+
+            &__text {
+                margin-right: 25px;
+
+                
+                @media all and (max-width: 1080px) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

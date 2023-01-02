@@ -1,0 +1,308 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1408px;
+  padding: 0 17px;
+  margin: 0 auto;
+}
+
+.sub-container {
+  max-width: 1174px;
+  padding: 0 17px;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 1080px) {
+  .container {
+    padding: 0 32px;
+  }
+  
+  .sub-container {
+    max-width: 833px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .container, .sub-container {
+    padding: 0 25px;
+  }
+}
+
+@media all and (max-width: 485px) {
+  .container, .sub-container {
+    padding: 0 16px;
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Lato-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Lato-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Lato-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Raleway-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/Raleway-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Raleway-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Montserrat-Regular.woff) format("woff");
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -100;
+  background-color: #0F1839;
+  /*   background-size: cover; */
+  /*   background-repeat: no-repeat; */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#ball-one:active,
+#ball-two:active {
+  -webkit-filter: blur(120px);
+  -moz-filter: blur(120px);
+  -o-filter: blur(120px);
+  -ms-filter: blur(120px);
+  filter: blur(120px);
+}
+
+#ball-one {
+  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  -webkit-filter: blur(70px);
+  -moz-filter: blur(70px);
+  -o-filter: blur(70px);
+  -ms-filter: blur(70px);
+  filter: blur(70px);
+  transition: all 5s;
+  animation: move1 5s infinite;
+  -webkit-animation: move1 5s infinite;
+}
+
+#ball-two {
+  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border-radius: 100%;
+  transition: all 8s;
+  -webkit-filter: blur(70px);
+  -moz-filter: blur(70px);
+  -o-filter: blur(70px);
+  -ms-filter: blur(70px);
+  filter: blur(70px);
+  animation: move2 5s infinite;
+  -webkit-animation: move2 5s infinite;
+}
+
+#ball-three {
+  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+  height: 100px;
+  width: 100px;
+  left: 100px;
+  top: 100px;
+  position: absolute;
+  border-radius: 100%;
+  transition: all 8s;
+  -webkit-filter: blur(70px);
+  -moz-filter: blur(70px);
+  -o-filter: blur(70px);
+  -ms-filter: blur(70px);
+  filter: blur(70px);
+  animation: move3 5s infinite;
+  -webkit-animation: move3 5s infinite;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translate3d(0, 5vh, 0);
+  }
+
+  15% {
+    transform: translate3d(5vw, 25vh, 0);
+  }
+
+  25% {
+    transform: translate3d(35vw, 45vh, 0);
+  }
+
+  35% {
+    transform: translate3d(80vw, 75vh, 0);
+    width: 150px;
+  }
+
+  50% {
+    transform: translate3d(40vw, 60vh, 0);
+    width: 200px;
+  }
+
+  65% {
+    transform: translate3d(20vw, 35vh, 0);
+  }
+
+  85% {
+    transform: translate3d(10vw, 25%, 0);
+    width: 100px;
+  }
+
+  100% {
+    transform: translate3d(0, 5vh, 0);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translate3d(0, 5vh, 0);
+  }
+
+  15% {
+    transform: translate3d(5vw, 25vh, 0);
+  }
+
+  25% {
+    transform: translate3d(35vw, 45vh, 0);
+  }
+
+  35% {
+    transform: translate3d(80vw, 75vh, 0);
+    width: 150px;
+  }
+
+  50% {
+    transform: translate3d(40vw, 60vh, 0);
+    width: 200px;
+  }
+
+  65% {
+    transform: translate3d(20vw, 35vh, 0);
+  }
+
+  85% {
+    transform: translate3d(10vw, 25%, 0);
+    width: 100px;
+  }
+
+  100% {
+    transform: translate3d(0, 5vh, 0);
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: translate3d(67vw, 55vh, 0);
+  }
+
+  15% {
+    transform: translate3d(38vw, 48vh, 0);
+    width: 150px;
+  }
+
+  25% {
+    transform: translate3d(59vw, 35vh, 0);
+    width: 200px;
+  }
+
+  35% {
+    transform: translate3d(73vw, 80vh, 0);
+    width: 100px;
+  }
+
+  50% {
+    transform: translate3d(84vw, 88vh, 0);
+  }
+
+  65% {
+    transform: translate3d(34vw, 58vh, 0);
+  }
+
+  85% {
+    transform: translate3d(79vw, 63vh, 0);
+  }
+
+  100% {
+    transform: translate3d(77vw, 95vh, 0);
+  }
+}

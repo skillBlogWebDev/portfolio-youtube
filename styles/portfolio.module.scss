@@ -1,0 +1,267 @@
+.portfolio {
+    padding-top: 60px;
+
+    @media all and (max-width: 1440px) {
+        padding-top: 65px;
+    }
+
+    @media all and (max-width: 1080px) {
+        padding-top: 42px;
+    }
+
+    @media all and (max-width: 800px) {
+        padding-top: 12px;
+    }
+
+    @media all and (max-width: 485px) {
+        padding-top: 21px;
+    }
+
+    &__inner {
+        padding-top: 52px;
+        margin-bottom: 58px;
+
+        @media all and (max-width: 1440px) {
+            padding-top: 56px;
+        }
+
+        @media all and (max-width: 1080px) {
+            padding-top: 39px;
+            margin-bottom: 48px;
+        }
+
+        @media all and (max-width: 800px) {
+            padding-top: 6px;
+            margin-bottom: 32px;
+        }
+
+        @media all and (max-width: 675px) {
+            overflow: scroll;
+        }
+
+        @media all and (max-width: 485px) {
+            padding-top: 0px;
+            margin-bottom: 49px;
+        }
+    }
+
+    &__tabs {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        @media all and (max-width: 675px) {
+            min-width: 625px;
+            height: 55px;
+            padding-left: 9px;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 58px;
+
+                @media all and (max-width: 1080px) {
+                    margin-right: 49px;
+                }
+
+                @media all and (max-width: 800px) {
+                    margin-right: 40px;
+                }
+
+                @media all and (max-width: 675px) {
+                    margin-right: 25px;
+                }
+            }
+
+            &:nth-child(3) {
+                margin-right: 73px;
+
+                @media all and (max-width: 1080px) {
+                    margin-right: 48px;
+                }
+
+                @media all and (max-width: 800px) {
+                    margin-right: 38px;
+                }
+            }
+
+            &__btn {
+                position: relative;
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+
+                &__text {
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                    font-size: 24px;
+
+                    @media all and (max-width: 1080px) {
+                        font-size: 22px;
+                    }
+
+                    @media all and (max-width: 800px) {
+                        font-size: 18px;
+                    }
+                }
+
+                &__arrow {
+                    position: absolute;
+                    top: 16px;
+                    left: -20px;
+
+                    @media all and (max-width: 1080px) {
+                        top: 6px;
+                    }
+                }
+
+                &__border {
+                    display: block;
+                    margin-top: 17px;
+                    height: 2px;
+                    background: linear-gradient(89.99deg, #5B5B5B 0%, rgba(91, 91, 91, 0) 100%);
+
+                    @media all and (max-width: 1080px) {
+                        margin-top: 9px;
+                    }
+
+                    @media all and (max-width: 800px) {
+                        margin-top: 5px;
+                    }
+                }
+
+                &__border_active {
+                    background: linear-gradient(89.99deg, #00D1FF 0%, rgba(255, 34, 141, 0) 100%);
+                }
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 32px;
+        grid-row-gap: 61px;
+        margin-bottom: 58px;
+
+        @media all and (max-width: 1440px) {
+            grid-row-gap: 53px;
+        }
+
+        &__item {
+            &__img {
+                margin-bottom: 32px;
+                width: 100%;
+                object-fit: cover;
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.01);
+                    transition: transform .3s ease-in-out;
+                }
+            }
+
+            &__title {
+                margin: 0;
+                font-family: 'Lato';
+                font-weight: 500;
+                font-size: 20px;
+                color: #F2F2F2;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 24px;
+    }
+
+    &__more {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+
+        &:hover &__text {
+            color: #F2F2F2;
+        }
+
+        &:hover &__border {
+            background: linear-gradient(89.99deg, #00D1FF 0%, rgba(255, 34, 141, 0) 100%);
+        }
+
+        &__text {
+            font-family: 'Raleway';
+            font-weight: 400;
+            font-size: 20px;
+            color: #B7BFD1;
+        }
+
+        &__border {
+            display: block;
+            margin-top: 16px;
+            height: 2px;
+            background: linear-gradient(89.99deg, #5B5B5B 0%, rgba(91, 91, 91, 0) 100%);
+        }
+    }
+
+    &__list__mobile {
+        margin-left: 11%;
+        max-width: 100vw;
+        overflow: hidden;
+
+        &__container {
+            overflow-x: auto;
+        }
+
+        @media all and (max-width: 800px) {
+            margin-left: 3%;
+        }
+        
+        @media all and (max-width: 485px) {
+            margin-left: 5%;
+        }
+    }
+
+    &__slide {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        width: calc(100% - 24px);
+        max-height: 400px;
+
+        @media all and (max-width: 800px) {
+            width: calc(100% - 13px);
+        }
+
+        &__inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            padding: 16px 8px;
+            background: rgba(21, 36, 72, 0.2);
+            backdrop-filter: blur(50px);
+        }
+
+        &__text {
+            font-family: 'Lato';
+            font-weight: 500;
+            font-size: 18px;
+            color: #F2F2F2;
+
+            @media all and (max-width: 485px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

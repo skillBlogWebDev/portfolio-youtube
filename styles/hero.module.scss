@@ -1,0 +1,148 @@
+.hero {
+    position: relative;
+    height: 800px;
+    padding-top: 135px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media all and (max-width: 800px) {
+        padding-top: 106px;
+    }
+
+    @media all and (max-width: 485px) {
+        height: 477px;
+        padding-top: 107px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 98px;
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 101px;
+        color: #06CAF8;
+        --hue: 0;
+        -webkit-text-fill-color: transparent; 
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: hsl(var(--hue), 50%, 95%);
+        text-shadow:
+          0 0 15px hsl(var(--hue), 60%, 90%, .80),
+          0 0 20px hsl(var(--hue), 70%, 80%, .85),
+          0 0 40px hsl(var(--hue), 80%, 70%, .90),
+          0 0 60px hsl(var(--hue), 90%, 60%, .95),
+          0 0 80px hsl(var(--hue), 100%, 50%, 1);
+
+        @media all and (max-width: 1440px) {
+            margin-bottom: 110px;
+        }
+
+        @media all and (max-width: 1080px) {
+            font-size: 72px;
+            margin-bottom: 88px;
+        }
+
+        @media all and (max-width: 800px) {
+            font-size: 52px;
+            margin-bottom: 57px;
+        }
+
+        @media all and (max-width: 485px) {
+            font-size: 42px;
+        }
+    }
+
+    &__description p {
+        margin: 0;
+        max-width: 485px;
+        line-height: 30px;
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 22px;
+        color: #F3F3F3;
+
+        @media all and (max-width: 1080px) {
+            font-size: 20px;
+            max-width: 395px;
+        }
+
+        @media all and (max-width: 800px) {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            max-width: 355px;
+        }
+
+        @media all and (max-width: 485px) {
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 84px;
+
+            @media all and (max-width: 1440px) {
+                margin-bottom: 82px;
+            }
+
+            @media all and (max-width: 1080px) {
+                margin-bottom: 65px;
+            }
+
+            @media all and (max-width: 800px) {
+                margin-bottom: 41px;
+            }
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 22px;
+        color: #F2F2F2;
+        padding: 16px 36px;
+        background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #00C9FC 0%, #1A46EF 56.36%);
+        border-radius: 4px;
+
+        &:hover {
+            background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+        }
+
+        @media all and (max-width: 1440px) {
+            padding: 25px 49px;
+        }
+
+        @media all and (max-width: 1080px) {
+            padding: 25px 37px;
+        }
+
+        
+        @media all and (max-width: 800px) {
+            font-size: 18px;
+            padding: 12px 33px;
+        }
+
+        @media all and (max-width: 485px) {
+            font-size: 16px;
+            padding: 12px 37px;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 66px;
+        cursor: pointer;
+        background-image: url('/img/hero-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @media all and (max-width: 1080px) {
+            bottom: 66px;
+        }
+    }
+}
