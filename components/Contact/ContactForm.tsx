@@ -27,6 +27,7 @@ const ContactForm = () => {
         })
 
         formRef.current.reset();
+        setAcceptWithRules(false);
     }
 
     return (
