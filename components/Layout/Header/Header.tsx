@@ -45,6 +45,7 @@ const Header = () => {
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Обо мне
                             </Link>
@@ -58,6 +59,7 @@ const Header = () => {
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Навыки
                             </Link>
@@ -71,6 +73,7 @@ const Header = () => {
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Портфолио
                             </Link>
@@ -84,6 +87,7 @@ const Header = () => {
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Обратная связь
                             </Link>
